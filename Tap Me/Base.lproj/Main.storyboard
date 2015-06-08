@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tap_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-cy-IhH">
+                                <rect key="frame" x="127" y="20" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-JU-5f8">
+                                <rect key="frame" x="109" y="418" width="103" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="cj0-sJ-kcF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-Pa-0JJ">
+                                <rect key="frame" x="77" y="228" width="167" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="1eB-DS-ZdU"/>
+                                    <constraint firstAttribute="width" constant="167" id="fcN-3g-9cJ"/>
+                                </constraints>
+                                <state key="normal" title="Tap Me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ocg-Nh-hme"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-r5-mQh">
+                                <rect key="frame" x="282" y="20" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1mZ-V2-5g9"/>
+                                    <constraint firstAttribute="width" constant="29" id="xYh-WW-igs"/>
+                                </constraints>
+                                <state key="normal" image="bt_setting.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30980393290519714" green="1" blue="0.21960785984992981" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="z9b-r5-mQh" secondAttribute="trailing" constant="-7" id="4YT-Ax-zjj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nhy-JU-5f8" secondAttribute="bottom" constant="20" id="BQG-z3-xnQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Nhy-JU-5f8" secondAttribute="centerX" id="Bks-Of-tib"/>
+                            <constraint firstAttribute="centerX" secondItem="LfO-Pa-0JJ" secondAttribute="centerX" id="OET-Ki-NXH"/>
+                            <constraint firstItem="z9b-r5-mQh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="hTJ-3k-Cap"/>
+                            <constraint firstAttribute="centerX" secondItem="ad9-cy-IhH" secondAttribute="centerX" id="nAK-ex-ATO"/>
+                            <constraint firstAttribute="centerY" secondItem="LfO-Pa-0JJ" secondAttribute="centerY" id="rHk-4Y-x5x"/>
+                            <constraint firstItem="ad9-cy-IhH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="tLk-56-wZA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Nhy-JU-5f8" id="CWj-q9-4Pw"/>
+                        <outlet property="timerLabel" destination="ad9-cy-IhH" id="jp4-il-u0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250.66666666666666" y="439.25333333333333"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bt_setting.png" width="29" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
